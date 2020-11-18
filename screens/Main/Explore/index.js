@@ -3,9 +3,11 @@ import { getRooms } from "../../../redux/roomsSlice";
 import ExploreContainer from "./ExploreContainer";
 
 const mapDispatchToProps = (dispatch) => {
-  getRooms: dispatch(getRooms());
+  return {
+    getRooms: () => dispatch(getRooms()),
+  };
 };
 
 const mapStateToProps = (state) => state.roomsReducer.explore;
 
-export default connect(null, mapDispatchToProps)(ExploreContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ExploreContainer);
