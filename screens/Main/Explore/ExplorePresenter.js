@@ -16,10 +16,10 @@ export default ({ rooms }) => {
         <ActivityIndicator color="black" />
       ) : (
         <ScrollView
+          showsVerticalScrollIndicator={false}
           style={{ width: "100%", marginTop: 120 }}
           contentContainerStyle={{ paddingHorizontal: 15 }}
         >
-          {console.log(rooms)}
           {rooms.map((room) => (
             <RoomCard
               key={room.id}
