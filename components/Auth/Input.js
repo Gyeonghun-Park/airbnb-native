@@ -21,7 +21,6 @@ const Input = ({
   isPassword = false,
   autoCapitalize,
   stateFn,
-  stateFn,
   keyboardType,
 }) => (
   <Container

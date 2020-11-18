@@ -12,9 +12,10 @@ const Container = styled.View`
 `;
 
 const Image = styled.Image`
+  height: 100%;
+  width: 100%;
   position: absolute;
   z-index: -1;
-  top: 0;
 `;
 
 const Logo = styled.Image`
@@ -45,7 +46,7 @@ export default ({ navigation }) => {
           <Btn onPress={goToSignIn} text={"Sign In"} />
         </BtnContainer>
       </BlurView>
-      <Image source={require("../assets/loginBg.jpeg")} />
+      <Image source={require("../../assets/loginBg.jpg")} />
       <StatusBar barStyle="light-content" />
     </Container>
   );
